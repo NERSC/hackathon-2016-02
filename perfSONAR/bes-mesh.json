@@ -432,7 +432,7 @@
                "psnr-farm04.slac.stanford.edu",
                "psnr-farm10.slac.stanford.edu",
                "perfsonar.ornl.gov",
-               "ps-border1-pt.lbl.gov"
+               "ps-sr1-als-bwctl.lbl.gov"
             ],
             "type" : "mesh"
          },
@@ -457,7 +457,7 @@
                "psnr-farm10.slac.stanford.edu",
                "psnr-farm04.slac.stanford.edu",
                "perfsonar.ornl.gov",
-               "ps-border1-owamp.lbl.gov"
+               "ps-sr1-als-owamp.lbl.gov"
             ],
             "type" : "mesh"
          },
@@ -481,7 +481,7 @@
                "psnr-farm10.slac.stanford.edu",
                "psnr-farm04.slac.stanford.edu",
                "perfsonar.ornl.gov",
-               "ps-border1-owamp.lbl.gov"
+               "ps-sr1-als-owamp.lbl.gov"
             ],
             "type" : "mesh"
          },
@@ -821,7 +821,7 @@
                "lbl-pt1.es.net"
             ],
             "b_members" : [
-               "ps-border1-pt.lbl.gov"
+               "ps-sr1-als-bwctl.lbl.gov"
             ],
             "type" : "disjoint"
          },
@@ -847,7 +847,7 @@
                "lbl-owamp.es.net"
             ],
             "b_members" : [
-               "ps-border1-owamp.lbl.gov"
+               "ps-sr1-als-owamp.lbl.gov"
             ],
             "type" : "disjoint"
          },
@@ -872,7 +872,7 @@
                "lbl-owamp.es.net"
             ],
             "b_members" : [
-               "ps-border1-owamp.lbl.gov"
+               "ps-sr1-als-owamp.lbl.gov"
             ],
             "type" : "disjoint"
          },
