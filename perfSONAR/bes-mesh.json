@@ -1,0 +1,951 @@
+{
+   "administrators" : [
+      {
+         "email" : "zurawski@es.net",
+         "name" : "Jason Zurawski"
+      }
+   ],
+   "organizations" : [
+      {
+         "sites" : [
+            {
+               "hosts" : [
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://anlborder-ps.it.anl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://anlborder-ps.it.anl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://anlborder-ps.it.anl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://anlborder-ps.it.anl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
+                        {
+                           "read_url" : "http://anlborder-ps.it.anl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://anlborder-ps.it.anl.gov/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "anlborder-ps.it.anl.gov"
+                     ],
+                     "description" : "anlborder-ps.it.anl.gov"
+                  }
+               ]
+            }
+         ],
+         "description" : "ANL"
+      },
+      {
+         "sites" : [
+            {
+               "hosts" : [
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://prfsnr-xraya.xray.aps.anl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://prfsnr-xraya.xray.aps.anl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://prfsnr-xraya.xray.aps.anl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://prfsnr-xraya.xray.aps.anl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
+                        {
+                           "read_url" : "http://prfsnr-xraya.xray.aps.anl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://prfsnr-xraya.xray.aps.anl.gov/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "prfsnr-xraya.xray.aps.anl.gov"
+                     ],
+                     "description" : "prfsnr-xraya.xray.aps.anl.gov"
+                  },
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://prfsnr-xrayb.xray.aps.anl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://prfsnr-xrayb.xray.aps.anl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://prfsnr-xrayb.xray.aps.anl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://prfsnr-xrayb.xray.aps.anl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
+                        {
+                           "read_url" : "http://prfsnr-xrayb.xray.aps.anl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://prfsnr-xrayb.xray.aps.anl.gov/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "prfsnr-xrayb.xray.aps.anl.gov"
+                     ],
+                     "description" : "prfsnr-xrayb.xray.aps.anl.gov"
+                  }
+               ]
+            }
+         ],
+         "description" : "APS @ ANL"
+      },
+      {
+         "sites" : [
+            {
+               "hosts" : [
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://lhcmon.bnl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://lhcmon.bnl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://lhcmon.bnl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://lhcmon.bnl.gov/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "lhcmon.bnl.gov"
+                     ],
+                     "description" : "lhcmon.bnl.gov"
+                  },
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://lhcperfmon.bnl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://lhcperfmon.bnl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
+                        {
+                           "read_url" : "http://lhcperfmon.bnl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://lhcperfmon.bnl.gov/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "lhcperfmon.bnl.gov"
+                     ],
+                     "description" : "lhcperfmon.bnl.gov"
+                  }
+               ]
+            }
+         ],
+         "description" : "BNL"
+      },
+      {
+         "sites" : [
+            {
+               "hosts" : [
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://psnr-lat01.slac.stanford.edu/esmond/perfsonar/archive",
+                           "write_url" : "http://psnr-lat01.slac.stanford.edu/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
+                        {
+                           "read_url" : "http://psnr-lat01.slac.stanford.edu/esmond/perfsonar/archive",
+                           "write_url" : "http://psnr-lat01.slac.stanford.edu/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "psnr-lat01.slac.stanford.edu"
+                     ],
+                     "description" : "psnr-lat01.slac.stanford.edu"
+                  },
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://psnr-farm04.slac.stanford.edu/esmond/perfsonar/archive",
+                           "write_url" : "http://psnr-farm04.slac.stanford.edu/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://psnr-farm04.slac.stanford.edu/esmond/perfsonar/archive",
+                           "write_url" : "http://psnr-farm04.slac.stanford.edu/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "psnr-farm04.slac.stanford.edu"
+                     ],
+                     "description" : "psnr-farm04.slac.stanford.edu"
+                  }
+               ]
+            }
+         ],
+         "description" : "SLAC"
+      },
+      {
+         "sites" : [
+            {
+               "hosts" : [
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://perfsonar.ornl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://perfsonar.ornl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://perfsonar.ornl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://perfsonar.ornl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
+                        {
+                           "read_url" : "http://perfsonar.ornl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://perfsonar.ornl.gov/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "perfsonar.ornl.gov"
+                     ],
+                     "description" : "perfsonar.ornl.gov"
+                  }
+               ]
+            }
+         ],
+         "description" : "ORNL"
+      },
+      {
+         "sites" : [
+            {
+               "hosts" : [
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://ps-sr1-als-bwctl.lbl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://ps-sr1-als-bwctl.lbl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://ps-sr1-als-bwctl.lbl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://ps-sr1-als-bwctl.lbl.gov/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "ps-sr1-als-bwctl.lbl.gov"
+                     ],
+                     "description" : "ps-sr1-als-bwctl.lbl.gov"
+                  },
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://ps-sr1-als-owamp.lbl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://ps-sr1-als-owamp.lbl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
+                        {
+                           "read_url" : "http://ps-sr1-als-owamp.lbl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://ps-sr1-als-owamp.lbl.gov/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "ps-sr1-als-owamp.lbl.gov"
+                     ],
+                     "description" : "ps-sr1-als-owamp.lbl.gov"
+                  }
+               ]
+            }
+         ],
+         "description" : "LBL"
+      },
+      {
+         "sites" : [
+            {
+               "hosts" : [
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://anl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://anl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://anl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://anl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "anl-pt1.es.net",
+                        "anl-pt1-v6.es.net"
+                     ],
+                     "description" : "anl-pt1.es.net",
+                     "no_agent" : "1"
+                  },
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://anl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://anl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
+                        {
+                           "read_url" : "http://anl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://anl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "anl-owamp.es.net",
+                        "anl-owamp-v6.es.net"
+                     ],
+                     "description" : "anl-owamp.es.net",
+                     "no_agent" : "1"
+                  }
+               ]
+            },
+            {
+               "hosts" : [
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://bnl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://bnl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://bnl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://bnl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "bnl-pt1.es.net",
+                        "bnl-pt1-v6.es.net"
+                     ],
+                     "description" : "bnl-pt1.es.net",
+                     "no_agent" : "1"
+                  },
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://bnl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://bnl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
+                        {
+                           "read_url" : "http://bnl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://bnl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "bnl-owamp.es.net",
+                        "bnl-owamp-v6.es.net"
+                     ],
+                     "description" : "bnl-owamp.es.net",
+                     "no_agent" : "1"
+                  }
+               ]
+            },
+            {
+               "hosts" : [
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://slac-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://slac-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://slac-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://slac-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "slac-pt1.es.net",
+                        "slac-pt1-v6.es.net"
+                     ],
+                     "description" : "slac-pt1.es.net",
+                     "no_agent" : "1"
+                  },
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://slac-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://slac-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
+                        {
+                           "read_url" : "http://slac-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://slac-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "slac-owamp.es.net",
+                        "slac-owamp-v6.es.net"
+                     ],
+                     "description" : "slac-owamp.es.net",
+                     "no_agent" : "1"
+                  }
+               ]
+            },
+            {
+               "hosts" : [
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://ornl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://ornl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://ornl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://ornl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "ornl-pt1.es.net",
+                        "ornl-pt1-v6.es.net"
+                     ],
+                     "description" : "ornl-pt1.es.net",
+                     "no_agent" : "1"
+                  },
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://ornl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://ornl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
+                        {
+                           "read_url" : "http://ornl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://ornl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "ornl-owamp.es.net",
+                        "ornl-owamp-v6.es.net"
+                     ],
+                     "description" : "ornl-owamp.es.net",
+                     "no_agent" : "1"
+                  }
+               ]
+            },
+            {
+               "hosts" : [
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://lbl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://lbl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://lbl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://lbl-pt1.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "lbl-pt1.es.net",
+                        "lbl-pt1-v6.es.net"
+                     ],
+                     "description" : "lbl-pt1.es.net",
+                     "no_agent" : "1"
+                  },
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://lbl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://lbl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
+                        {
+                           "read_url" : "http://lbl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "write_url" : "http://lbl-owamp.es.net:8085/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "lbl-owamp.es.net",
+                        "lbl-owamp-v6.es.net"
+                     ],
+                     "description" : "lbl-owamp.es.net",
+                     "no_agent" : "1"
+                  }
+               ]
+            }
+         ],
+         "description" : "ESnet"
+      }
+   ],
+   "tests" : [
+      {
+         "parameters" : {
+            "protocol" : "tcp",
+            "omit_interval" : "10",
+            "duration" : "30",
+            "interval" : "21600",
+            "force_bidirectional" : "0",
+            "tool" : "bwctl/iperf3",
+            "random_start_percentage" : "25",
+            "type" : "perfsonarbuoy/bwctl"
+         },
+         "members" : {
+            "members" : [
+               "prfsnr-xraya.xray.aps.anl.gov",
+               "prfsnr-xrayb.xray.aps.anl.gov",
+               "lhcmon.bnl.gov",
+               "psnr-farm04.slac.stanford.edu",
+               "perfsonar.ornl.gov",
+               "ps-sr1-als-bwctl.lbl.gov"
+            ],
+            "type" : "mesh"
+         },
+         "description" : "BES Throughput Testing"
+      },
+      {
+         "parameters" : {
+            "loss_threshold" : "10",
+            "bucket_width" : "0.0001",
+            "packet_interval" : "0.1",
+            "sample_count" : "600",
+            "force_bidirectional" : "1",
+            "packet_padding" : "0",
+            "type" : "perfsonarbuoy/owamp",
+            "session_count" : "10800"
+         },
+         "members" : {
+            "members" : [
+               "prfsnr-xraya.xray.aps.anl.gov",
+               "prfsnr-xrayb.xray.aps.anl.gov",
+               "lhcperfmon.bnl.gov",
+               "psnr-lat01.slac.stanford.edu",
+               "perfsonar.ornl.gov",
+               "ps-sr1-als-owamp.lbl.gov"
+            ],
+            "type" : "mesh"
+         },
+         "description" : "BES OWAMP Testing"
+      },
+      {
+         "parameters" : {
+            "protocol" : "udp",
+            "waittime" : "5",
+            "pause" : "0",
+            "timeout" : "30",
+            "type" : "traceroute",
+            "test_interval" : "600",
+            "packet_size" : "40"
+         },
+         "members" : {
+            "members" : [
+               "prfsnr-xraya.xray.aps.anl.gov",
+               "prfsnr-xrayb.xray.aps.anl.gov",
+               "lhcperfmon.bnl.gov",
+               "psnr-lat01.slac.stanford.edu",
+               "perfsonar.ornl.gov",
+               "ps-sr1-als-owamp.lbl.gov"
+            ],
+            "type" : "mesh"
+         },
+         "description" : "BES Traceroute Testing"
+      },
+      {
+         "parameters" : {
+            "protocol" : "tcp",
+            "omit_interval" : "10",
+            "duration" : "30",
+            "interval" : "21600",
+            "force_bidirectional" : "0",
+            "tool" : "bwctl/iperf3",
+            "random_start_percentage" : "25",
+            "type" : "perfsonarbuoy/bwctl"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-pt1.es.net",
+               "bnl-pt1.es.net",
+               "slac-pt1.es.net",
+               "ornl-pt1.es.net",
+               "lbl-pt1.es.net"
+            ],
+            "b_members" : [
+               "prfsnr-xraya.xray.aps.anl.gov",
+               "prfsnr-xrayb.xray.aps.anl.gov"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "ANL BES Throughput Testing"
+      },
+      {
+         "parameters" : {
+            "loss_threshold" : "10",
+            "bucket_width" : "0.0001",
+            "packet_interval" : "0.1",
+            "sample_count" : "600",
+            "force_bidirectional" : "1",
+            "packet_padding" : "0",
+            "type" : "perfsonarbuoy/owamp",
+            "session_count" : "10800"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-owamp.es.net",
+               "bnl-owamp.es.net",
+               "slac-owamp.es.net",
+               "ornl-owamp.es.net",
+               "lbl-owamp.es.net"
+            ],
+            "b_members" : [
+               "prfsnr-xraya.xray.aps.anl.gov",
+               "prfsnr-xrayb.xray.aps.anl.gov"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "ANL BES OWAMP Testing"
+      },
+      {
+         "parameters" : {
+            "protocol" : "udp",
+            "waittime" : "5",
+            "pause" : "0",
+            "timeout" : "30",
+            "type" : "traceroute",
+            "test_interval" : "600",
+            "packet_size" : "40"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-owamp.es.net",
+               "bnl-owamp.es.net",
+               "slac-owamp.es.net",
+               "ornl-owamp.es.net",
+               "lbl-owamp.es.net"
+            ],
+            "b_members" : [
+               "prfsnr-xraya.xray.aps.anl.gov",
+               "prfsnr-xrayb.xray.aps.anl.gov"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "ANL BES Traceroute Testing"
+      },
+      {
+         "parameters" : {
+            "protocol" : "tcp",
+            "omit_interval" : "10",
+            "duration" : "30",
+            "interval" : "21600",
+            "force_bidirectional" : "0",
+            "tool" : "bwctl/iperf3",
+            "random_start_percentage" : "25",
+            "type" : "perfsonarbuoy/bwctl"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-pt1.es.net",
+               "bnl-pt1.es.net",
+               "slac-pt1.es.net",
+               "ornl-pt1.es.net",
+               "lbl-pt1.es.net"
+            ],
+            "b_members" : [
+               "lhcmon.bnl.gov"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "BNL BES Throughput Testing"
+      },
+      {
+         "parameters" : {
+            "loss_threshold" : "10",
+            "bucket_width" : "0.0001",
+            "packet_interval" : "0.1",
+            "sample_count" : "600",
+            "force_bidirectional" : "1",
+            "packet_padding" : "0",
+            "type" : "perfsonarbuoy/owamp",
+            "session_count" : "10800"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-owamp.es.net",
+               "bnl-owamp.es.net",
+               "slac-owamp.es.net",
+               "ornl-owamp.es.net",
+               "lbl-owamp.es.net"
+            ],
+            "b_members" : [
+               "lhcperfmon.bnl.gov"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "BNL BES OWAMP Testing"
+      },
+      {
+         "parameters" : {
+            "protocol" : "udp",
+            "waittime" : "5",
+            "pause" : "0",
+            "timeout" : "30",
+            "type" : "traceroute",
+            "test_interval" : "600",
+            "packet_size" : "40"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-owamp.es.net",
+               "bnl-owamp.es.net",
+               "slac-owamp.es.net",
+               "ornl-owamp.es.net",
+               "lbl-owamp.es.net"
+            ],
+            "b_members" : [
+               "lhcperfmon.bnl.gov"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "BNL BES Traceroute Testing"
+      },
+      {
+         "parameters" : {
+            "protocol" : "tcp",
+            "omit_interval" : "10",
+            "duration" : "30",
+            "interval" : "21600",
+            "force_bidirectional" : "0",
+            "tool" : "bwctl/iperf3",
+            "random_start_percentage" : "25",
+            "type" : "perfsonarbuoy/bwctl"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-pt1.es.net",
+               "bnl-pt1.es.net",
+               "slac-pt1.es.net",
+               "ornl-pt1.es.net",
+               "lbl-pt1.es.net"
+            ],
+            "b_members" : [
+               "psnr-farm04.slac.stanford.edu"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "SLAC BES Throughput Testing"
+      },
+      {
+         "parameters" : {
+            "loss_threshold" : "10",
+            "bucket_width" : "0.0001",
+            "packet_interval" : "0.1",
+            "sample_count" : "600",
+            "force_bidirectional" : "1",
+            "packet_padding" : "0",
+            "type" : "perfsonarbuoy/owamp",
+            "session_count" : "10800"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-owamp.es.net",
+               "bnl-owamp.es.net",
+               "slac-owamp.es.net",
+               "ornl-owamp.es.net",
+               "lbl-owamp.es.net"
+            ],
+            "b_members" : [
+               "psnr-lat01.slac.stanford.edu"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "SLAC BES OWAMP Testing"
+      },
+      {
+         "parameters" : {
+            "protocol" : "udp",
+            "waittime" : "5",
+            "pause" : "0",
+            "timeout" : "30",
+            "type" : "traceroute",
+            "test_interval" : "600",
+            "packet_size" : "40"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-owamp.es.net",
+               "bnl-owamp.es.net",
+               "slac-owamp.es.net",
+               "ornl-owamp.es.net",
+               "lbl-owamp.es.net"
+            ],
+            "b_members" : [
+               "psnr-lat01.slac.stanford.edu"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "SLAC BES Traceroute Testing"
+      },
+      {
+         "parameters" : {
+            "protocol" : "tcp",
+            "omit_interval" : "10",
+            "duration" : "30",
+            "interval" : "21600",
+            "force_bidirectional" : "0",
+            "tool" : "bwctl/iperf3",
+            "random_start_percentage" : "25",
+            "type" : "perfsonarbuoy/bwctl"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-pt1.es.net",
+               "bnl-pt1.es.net",
+               "slac-pt1.es.net",
+               "ornl-pt1.es.net",
+               "lbl-pt1.es.net"
+            ],
+            "b_members" : [
+               "perfsonar.ornl.gov"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "ORNL BES Throughput Testing"
+      },
+      {
+         "parameters" : {
+            "loss_threshold" : "10",
+            "bucket_width" : "0.0001",
+            "packet_interval" : "0.1",
+            "sample_count" : "600",
+            "force_bidirectional" : "1",
+            "packet_padding" : "0",
+            "type" : "perfsonarbuoy/owamp",
+            "session_count" : "10800"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-owamp.es.net",
+               "bnl-owamp.es.net",
+               "slac-owamp.es.net",
+               "ornl-owamp.es.net",
+               "lbl-owamp.es.net"
+            ],
+            "b_members" : [
+               "perfsonar.ornl.gov"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "ORNL BES OWAMP Testing"
+      },
+      {
+         "parameters" : {
+            "protocol" : "udp",
+            "waittime" : "5",
+            "pause" : "0",
+            "timeout" : "30",
+            "type" : "traceroute",
+            "test_interval" : "600",
+            "packet_size" : "40"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-owamp.es.net",
+               "bnl-owamp.es.net",
+               "slac-owamp.es.net",
+               "ornl-owamp.es.net",
+               "lbl-owamp.es.net"
+            ],
+            "b_members" : [
+               "perfsonar.ornl.gov"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "ORNL BES Traceroute Testing"
+      },
+      {
+         "parameters" : {
+            "protocol" : "tcp",
+            "omit_interval" : "10",
+            "duration" : "30",
+            "interval" : "21600",
+            "force_bidirectional" : "0",
+            "tool" : "bwctl/iperf3",
+            "random_start_percentage" : "25",
+            "type" : "perfsonarbuoy/bwctl"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-pt1.es.net",
+               "bnl-pt1.es.net",
+               "slac-pt1.es.net",
+               "ornl-pt1.es.net",
+               "lbl-pt1.es.net"
+            ],
+            "b_members" : [
+               "ps-sr1-als-bwctl.lbl.gov"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "LBL  BES Throughput Testing"
+      },
+      {
+         "parameters" : {
+            "loss_threshold" : "10",
+            "bucket_width" : "0.0001",
+            "packet_interval" : "0.1",
+            "sample_count" : "600",
+            "force_bidirectional" : "1",
+            "packet_padding" : "0",
+            "type" : "perfsonarbuoy/owamp",
+            "session_count" : "10800"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-owamp.es.net",
+               "bnl-owamp.es.net",
+               "slac-owamp.es.net",
+               "ornl-owamp.es.net",
+               "lbl-owamp.es.net"
+            ],
+            "b_members" : [
+               "ps-sr1-als-owamp.lbl.gov"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "LBL  BES OWAMP Testing"
+      },
+      {
+         "parameters" : {
+            "protocol" : "udp",
+            "waittime" : "5",
+            "pause" : "0",
+            "timeout" : "30",
+            "type" : "traceroute",
+            "test_interval" : "600",
+            "packet_size" : "40"
+         },
+         "members" : {
+            "a_members" : [
+               "anl-owamp.es.net",
+               "bnl-owamp.es.net",
+               "slac-owamp.es.net",
+               "ornl-owamp.es.net",
+               "lbl-owamp.es.net"
+            ],
+            "b_members" : [
+               "ps-sr1-als-owamp.lbl.gov"
+            ],
+            "type" : "disjoint"
+         },
+         "description" : "LBL  BES Traceroute Testing"
+      }
+   ],
+   "description" : "BES perfSONAR Mesh"
+}
