@@ -22,10 +22,10 @@ do
 	BYTES=$value
 	;;
   DEST) 
-	DEST=$value
+	DEST=`echo $value | tr -d '[,]'`
 	;;
   HOST) 
-	SOURCE=$value
+	SOURCE=`host $value | cut -d' ' -f4`
 	;;
   TYPE) 
 	TYPE=$value
