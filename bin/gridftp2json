@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# parser for grdiftp xferlogs 
+# read in a log file and emit JSON
+
+while read line
+do
+ for kvp in $line; do 
+  set -- `echo $kvp | tr '=' ' '`
+  key=$1
+  value=$2
+#  echo $key, "|", $value
+
+  case $key in
+  START) 
+	START=$value
+	;;
+  DATE) 
+	STOP=$value
+	;;
+  NBYTES) 
+	BYTES=$value
+	;;
+  DEST) 
+	DEST=$value
+	;;
+  HOST) 
+	SOURCE=$value
+	;;
+  TYPE) 
+	TYPE=$value
+	;;
+  CODE) 
+	;;
+  esac
+ done 
+ 
+ case TYPE in
+ STOR) 
+	TMP=$DEST
+	DEST=$SOURCE
+	SOURCE=$TMP
+	;;
+ esac
+
+ echo $START, $STOP, $BYTES, $SOURCE, $DEST
+
+done < "${1:-/dev/stdin}"
+
