@@ -254,6 +254,42 @@
                         "ps-sr1-als-owamp.lbl.gov"
                      ],
                      "description" : "ps-sr1-als-owamp.lbl.gov"
+                  },
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://ps-border1-pt.lbl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://ps-border1-pt.lbl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://ps-border1-pt.lbl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://ps-border1-pt.lbl.gov/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "ps-border1-pt.lbl.gov"
+                     ],
+                     "description" : "ps-border1-pt.lbl.gov"
+                  },
+                  {
+                     "measurement_archives" : [
+                        {
+                           "read_url" : "http://ps-border1-owamp.lbl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://ps-border1-owamp.lbl.gov/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
+                        {
+                           "read_url" : "http://ps-border1-owamp.lbl.gov/esmond/perfsonar/archive",
+                           "write_url" : "http://ps-border1-owamp.lbl.gov/esmond/perfsonar/archive",
+                           "type" : "traceroute"
+                        }
+                     ],
+                     "addresses" : [
+                        "ps-border1-owamp.lbl.gov"
+                     ],
+                     "description" : "ps-border1-owamp.lbl.gov"
                   }
                ]
             }
@@ -265,18 +301,6 @@
             {
                "hosts" : [
                   {
-                     "measurement_archives" : [
-                        {
-                           "read_url" : "http://anl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://anl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "perfsonarbuoy/bwctl"
-                        },
-                        {
-                           "read_url" : "http://anl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://anl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "traceroute"
-                        }
-                     ],
                      "addresses" : [
                         "anl-pt1.es.net",
                         "anl-pt1-v6.es.net"
@@ -285,18 +309,6 @@
                      "no_agent" : "1"
                   },
                   {
-                     "measurement_archives" : [
-                        {
-                           "read_url" : "http://anl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://anl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "perfsonarbuoy/owamp"
-                        },
-                        {
-                           "read_url" : "http://anl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://anl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "traceroute"
-                        }
-                     ],
                      "addresses" : [
                         "anl-owamp.es.net",
                         "anl-owamp-v6.es.net"
@@ -309,18 +321,6 @@
             {
                "hosts" : [
                   {
-                     "measurement_archives" : [
-                        {
-                           "read_url" : "http://bnl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://bnl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "perfsonarbuoy/bwctl"
-                        },
-                        {
-                           "read_url" : "http://bnl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://bnl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "traceroute"
-                        }
-                     ],
                      "addresses" : [
                         "bnl-pt1.es.net",
                         "bnl-pt1-v6.es.net"
@@ -329,18 +329,6 @@
                      "no_agent" : "1"
                   },
                   {
-                     "measurement_archives" : [
-                        {
-                           "read_url" : "http://bnl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://bnl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "perfsonarbuoy/owamp"
-                        },
-                        {
-                           "read_url" : "http://bnl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://bnl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "traceroute"
-                        }
-                     ],
                      "addresses" : [
                         "bnl-owamp.es.net",
                         "bnl-owamp-v6.es.net"
@@ -353,18 +341,6 @@
             {
                "hosts" : [
                   {
-                     "measurement_archives" : [
-                        {
-                           "read_url" : "http://slac-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://slac-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "perfsonarbuoy/bwctl"
-                        },
-                        {
-                           "read_url" : "http://slac-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://slac-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "traceroute"
-                        }
-                     ],
                      "addresses" : [
                         "slac-pt1.es.net",
                         "slac-pt1-v6.es.net"
@@ -373,18 +349,6 @@
                      "no_agent" : "1"
                   },
                   {
-                     "measurement_archives" : [
-                        {
-                           "read_url" : "http://slac-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://slac-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "perfsonarbuoy/owamp"
-                        },
-                        {
-                           "read_url" : "http://slac-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://slac-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "traceroute"
-                        }
-                     ],
                      "addresses" : [
                         "slac-owamp.es.net",
                         "slac-owamp-v6.es.net"
@@ -397,18 +361,6 @@
             {
                "hosts" : [
                   {
-                     "measurement_archives" : [
-                        {
-                           "read_url" : "http://ornl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://ornl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "perfsonarbuoy/bwctl"
-                        },
-                        {
-                           "read_url" : "http://ornl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://ornl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "traceroute"
-                        }
-                     ],
                      "addresses" : [
                         "ornl-pt1.es.net",
                         "ornl-pt1-v6.es.net"
@@ -417,18 +369,6 @@
                      "no_agent" : "1"
                   },
                   {
-                     "measurement_archives" : [
-                        {
-                           "read_url" : "http://ornl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://ornl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "perfsonarbuoy/owamp"
-                        },
-                        {
-                           "read_url" : "http://ornl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://ornl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "traceroute"
-                        }
-                     ],
                      "addresses" : [
                         "ornl-owamp.es.net",
                         "ornl-owamp-v6.es.net"
@@ -441,18 +381,6 @@
             {
                "hosts" : [
                   {
-                     "measurement_archives" : [
-                        {
-                           "read_url" : "http://lbl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://lbl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "perfsonarbuoy/bwctl"
-                        },
-                        {
-                           "read_url" : "http://lbl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://lbl-pt1.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "traceroute"
-                        }
-                     ],
                      "addresses" : [
                         "lbl-pt1.es.net",
                         "lbl-pt1-v6.es.net"
@@ -461,18 +389,6 @@
                      "no_agent" : "1"
                   },
                   {
-                     "measurement_archives" : [
-                        {
-                           "read_url" : "http://lbl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://lbl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "perfsonarbuoy/owamp"
-                        },
-                        {
-                           "read_url" : "http://lbl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "write_url" : "http://lbl-owamp.es.net:8085/esmond/perfsonar/archive",
-                           "type" : "traceroute"
-                        }
-                     ],
                      "addresses" : [
                         "lbl-owamp.es.net",
                         "lbl-owamp-v6.es.net"
@@ -505,7 +421,7 @@
                "lhcmon.bnl.gov",
                "psnr-farm04.slac.stanford.edu",
                "perfsonar.ornl.gov",
-               "ps-sr1-als-bwctl.lbl.gov"
+               "ps-border1-pt.lbl.gov"
             ],
             "type" : "mesh"
          },
@@ -529,7 +445,7 @@
                "lhcperfmon.bnl.gov",
                "psnr-lat01.slac.stanford.edu",
                "perfsonar.ornl.gov",
-               "ps-sr1-als-owamp.lbl.gov"
+               "ps-border1-owamp.lbl.gov"
             ],
             "type" : "mesh"
          },
@@ -552,7 +468,7 @@
                "lhcperfmon.bnl.gov",
                "psnr-lat01.slac.stanford.edu",
                "perfsonar.ornl.gov",
-               "ps-sr1-als-owamp.lbl.gov"
+               "ps-border1-owamp.lbl.gov"
             ],
             "type" : "mesh"
          },
@@ -889,7 +805,7 @@
                "lbl-pt1.es.net"
             ],
             "b_members" : [
-               "ps-sr1-als-bwctl.lbl.gov"
+               "ps-border1-pt.lbl.gov"
             ],
             "type" : "disjoint"
          },
@@ -915,7 +831,7 @@
                "lbl-owamp.es.net"
             ],
             "b_members" : [
-               "ps-sr1-als-owamp.lbl.gov"
+               "ps-border1-owamp.lbl.gov"
             ],
             "type" : "disjoint"
          },
@@ -940,7 +856,7 @@
                "lbl-owamp.es.net"
             ],
             "b_members" : [
-               "ps-sr1-als-owamp.lbl.gov"
+               "ps-border1-owamp.lbl.gov"
             ],
             "type" : "disjoint"
          },
