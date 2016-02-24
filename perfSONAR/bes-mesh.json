@@ -145,23 +145,33 @@
                   {
                      "measurement_archives" : [
                         {
-                           "read_url" : "http://psnr-lat01.slac.stanford.edu/esmond/perfsonar/archive",
-                           "write_url" : "http://psnr-lat01.slac.stanford.edu/esmond/perfsonar/archive",
+                           "read_url" : "http://psnr-farm10.slac.stanford.edu /esmond/perfsonar/archive",
+                           "write_url" : "http://psnr-farm10.slac.stanford.edu /esmond/perfsonar/archive",
                            "type" : "perfsonarbuoy/owamp"
                         },
                         {
-                           "read_url" : "http://psnr-lat01.slac.stanford.edu/esmond/perfsonar/archive",
-                           "write_url" : "http://psnr-lat01.slac.stanford.edu/esmond/perfsonar/archive",
+                           "read_url" : "http://psnr-farm10.slac.stanford.edu /esmond/perfsonar/archive",
+                           "write_url" : "http://psnr-farm10.slac.stanford.edu /esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/bwctl"
+                        },
+                        {
+                           "read_url" : "http://psnr-farm10.slac.stanford.edu /esmond/perfsonar/archive",
+                           "write_url" : "http://psnr-farm10.slac.stanford.edu /esmond/perfsonar/archive",
                            "type" : "traceroute"
                         }
                      ],
                      "addresses" : [
-                        "psnr-lat01.slac.stanford.edu"
+                        "psnr-farm10.slac.stanford.edu"
                      ],
-                     "description" : "psnr-lat01.slac.stanford.edu"
+                     "description" : "psnr-farm10.slac.stanford.edu"
                   },
                   {
                      "measurement_archives" : [
+                        {
+                           "read_url" : "http://psnr-farm04.slac.stanford.edu/esmond/perfsonar/archive",
+                           "write_url" : "http://psnr-farm04.slac.stanford.edu/esmond/perfsonar/archive",
+                           "type" : "perfsonarbuoy/owamp"
+                        },
                         {
                            "read_url" : "http://psnr-farm04.slac.stanford.edu/esmond/perfsonar/archive",
                            "write_url" : "http://psnr-farm04.slac.stanford.edu/esmond/perfsonar/archive",
@@ -420,6 +430,7 @@
                "prfsnr-xrayb.xray.aps.anl.gov",
                "lhcmon.bnl.gov",
                "psnr-farm04.slac.stanford.edu",
+               "psnr-farm10.slac.stanford.edu",
                "perfsonar.ornl.gov",
                "ps-border1-pt.lbl.gov"
             ],
@@ -443,7 +454,8 @@
                "prfsnr-xraya.xray.aps.anl.gov",
                "prfsnr-xrayb.xray.aps.anl.gov",
                "lhcperfmon.bnl.gov",
-               "psnr-lat01.slac.stanford.edu",
+               "psnr-farm10.slac.stanford.edu",
+               "psnr-farm04.slac.stanford.edu",
                "perfsonar.ornl.gov",
                "ps-border1-owamp.lbl.gov"
             ],
@@ -466,7 +478,8 @@
                "prfsnr-xraya.xray.aps.anl.gov",
                "prfsnr-xrayb.xray.aps.anl.gov",
                "lhcperfmon.bnl.gov",
-               "psnr-lat01.slac.stanford.edu",
+               "psnr-farm10.slac.stanford.edu",
+               "psnr-farm04.slac.stanford.edu",
                "perfsonar.ornl.gov",
                "ps-border1-owamp.lbl.gov"
             ],
@@ -651,6 +664,7 @@
                "lbl-pt1.es.net"
             ],
             "b_members" : [
+               "psnr-farm10.slac.stanford.edu",
                "psnr-farm04.slac.stanford.edu"
             ],
             "type" : "disjoint"
@@ -677,7 +691,8 @@
                "lbl-owamp.es.net"
             ],
             "b_members" : [
-               "psnr-lat01.slac.stanford.edu"
+               "psnr-farm10.slac.stanford.edu",
+               "psnr-farm04.slac.stanford.edu"
             ],
             "type" : "disjoint"
          },
@@ -702,7 +717,8 @@
                "lbl-owamp.es.net"
             ],
             "b_members" : [
-               "psnr-lat01.slac.stanford.edu"
+               "psnr-farm10.slac.stanford.edu",
+               "psnr-farm04.slac.stanford.edu"
             ],
             "type" : "disjoint"
          },
