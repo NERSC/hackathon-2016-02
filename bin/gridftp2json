@@ -25,7 +25,11 @@ do
 	DEST=`echo $value | tr -d '[,]'`
 	;;
   HOST) 
-	SOURCE=`host $value | cut -d' ' -f4`
+        if [[ $value =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+                SOURCE=$value
+        else
+                SOURCE=`host -t A $value | grep address | cut -d' ' -f4`
+        fi
 	;;
   TYPE) 
 	TYPE=$value
