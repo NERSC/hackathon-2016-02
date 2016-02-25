@@ -15,16 +15,21 @@ import string
 import getopt
 
 class ParseOptions:
+	#
+	# Class to handle command-line argument processing.
+	#
 	def __init__( self ):
-		self.file_types = ( 'ftp', 'gridftp', 'apache', 'gridftp-anon' )
 		self.my_options = dict()
+		self.input_fd = sys.stdin
+		self.output_fd = sys.stdout
+		self.file_types = ( 'ftp', 'gridftp', 'apache', 'gridftp-anon' )
 		try:
 			opts, args = getopt.getopt( sys.argv[1:], "t:i:o:", ['type=', 'input=', 'output='] )
 		except getopt.GetoptError as err:
 			print str(err)
 			self.usage()
 			sys.exit( 2 )
-		self.my_options['type'] = None
+		self.my_options['type'] = 'gridftp'
 		self.my_options['input'] = None
 		self.my_options['output'] = None
 		for opt, arg in opts:
@@ -35,63 +40,106 @@ class ParseOptions:
 					self.my_options['type'] = arg
 			elif( opt in ('-i', '--input') ):
 				self.my_options['input'] = arg
+				try:
+					self.input_fd = open( arg, 'r' )
+				except:
+					print "*** Failed to open input file '" + arg + "' ***"
+					sys.exit( 2 )
 			elif ( opt in ('-o', '--output') ):
 				self.my_options['output'] = arg
+				try:
+					self.my_options.output_fd = open( arg, 'w' )
+				except:
+					print "*** Failed to open output file '" + arg + "' ***"
+					sys.exit( 2 )
 			else:
 				assert False, 'Unknown option'
 
 	def options_list( self ):
+		#
+		# Return all options as a Python list
+		#
 		return (self.my_options['type'], self.my_options['input'], self.my_options['output'] )
 
 	def options_dict( self ):
+		#
+		# Return all options as a Python dictionary
+		#
 		return self.my_options
 
 	def option( self, option ):
+		#
+		# Return the named option as a string, or "None" if the option
+		# doesn't exist.
+		#
 		if ( self.my_options.has_key( option ) ):
 			return self.my_options[option]
 		else:
 			return None
 
 	def usage( self ):
-		print "USAGE:"
+		print 'USAGE:'
+		print sys.argv[0] + ' -t <type> [--type=<type>] -i <in_file> [--input=in_file] -o <out_file> [--output=<out_file>]'
+		print '               Where:'
+		print '                      <type> is one of gridftp, apache, ftp'
+		print '                      <in_file> is the path/name of the log file to process (default stdin)'
+		print '                      <out_file> is the path/name of the file in which to write the JSON code (default stdout)'
+		print
 
 class GenericLog:
+	#
+	# Class GenericLog implements the basic class/method structure for parsing different
+	# log file formats. It is not intended to be instantiated directly.
+	#
 	def __init__( self, log_line ):
 		self.line = log_line
 		self.log_dict = dict()
 		socket.gethostbyname( socket.gethostname())
 
 	def parse( self ):
-		# This is a placeholder
+		# This is a placeholder for the actual log file parsing code
 		True
 
 	def to_json( self ):
+		#
+		# Convert the parsed log file entry to JSON
+		#
 		self.json = json.dumps( self.log_dict )
 
 	def dump_json( self, output_fd=None ):
+		#
+		# Write the JSON code to STDOUT, or an open file descriptor, if one is provided
+		#
 		if ( self.json and len( self.json ) > 2 ):
 			if ( output_fd ):
 				output_fd.write( self.json + '\n' )
 			else:
 				print self.json
 
-	def string_to_datetime( self, date_string ):
+	def apache_time_to_datetime( self, date_string ):
+		#
+		# Convert an Apache access log file time/date value to ISO 8601 format. Since Apache
+		# doesn't include microseconds, fill that field in as a static "0" value
+		#
 		dt = datetime.datetime.strptime( date_string, '%d/%b/%Y:%H:%M:%S' )
-		#
-		# Return time/date in ISO 8601 format, minus the normal punctuation. Since Apache does not include
-		# microseconds, just fill in zeroes for that data.
-		#
 		return string.translate( dt.isoformat( ' ' ), None, '- :' ) + '.000000'
 
 	def dump( self ):
+		#
+		# A simple dump to STDOUT routine for debugging
+		#
 		print
 		print "log line: '" + self.line
 		print "values:", self.log_dict
 		print "json:", self.json
 
 class GridftpLog( GenericLog ):
+	#
+	# Process a single Gridftp log file line
+	#
 	def __init__( self, log_line ):
 		GenericLog.__init__(  self, log_line )
+		# keywords{} maps log file keywords to standard keywords used in the JSON file
 		self.keywords = {'START': 'START', 'DATE': 'STOP', 'NBYTES': 'BYTES', 'DEST': 'DEST', 'HOST': 'SOURCE', 'TYPE': 'TYPE', 'CODE': 'CODE'}
 		self.log_dict = dict()
 
@@ -122,6 +170,9 @@ class GridftpLog( GenericLog ):
 			self.log_dict['DEST'] = name2IP( self.log_dict['DEST'] )
 
 class ApacheAccessLog( GenericLog ):
+	#
+	# Process a single Apache access log file line
+	#
 	def __init__( self, log_line ):
 		GenericLog.__init__( self, log_line )
 		self.my_IP = socket.gethostbyname(socket.gethostname())
@@ -132,13 +183,16 @@ class ApacheAccessLog( GenericLog ):
 			vals = fields.groups()
 			self.log_dict['DEST'] = name2IP( vals[0] )
 			self.log_dict['HOST'] = self.my_IP
-			self.log_dict['START'] = self.string_to_datetime( vals[3] )
+			self.log_dict['START'] = self.apache_time_to_datetime( vals[3] )
 			self.log_dict['STOP'] = ''
 			self.log_dict['PATH'] = vals[6]
 			self.log_dict['PROTOCOL'] = 'ftp'
 			self.log_dict['BYTES'] = vals[9]
 
 def name2IP( name ):
+	#
+	# Accept a source/destination host string and convert it to an IP address. If the incoming
+	# value is already an IP address, simply return it unchanged.
 	#
 	# Check to see if this is already an IP address
 	#
@@ -155,28 +209,17 @@ def name2IP( name ):
 		except:
 			return name
 
+#
+# MAIN PROGRAM
+#
 try:
 	opts = ParseOptions()
 except:
-	print "quitting"
 	sys.exit( 2 )
 
 file_type = opts.option( 'type' )
-try:
-	fd = open( opts.option( 'input' ) )
-except:
-	print "*** Failed to open input file '" + opts.option( 'input' ) + "' ***"
-	sys.exit( 3 )
-if ( opts.option( 'output' ) ):
-	try:
-		out_fd = open( opts.option( 'output' ), 'w' )
-	except:
-		print "*** Failed to open output file '" + opts.option( 'output' ) + "' ***"
-		sys.exit( 3 )
-else:
-	out_fd = None
 
-for line in fd.readlines():
+for line in opts.input_fd.readlines():
 	if ( file_type == 'apache' ):
 		log_line = ApacheAccessLog( line )
 	elif ( file_type == 'gridftp' ):
@@ -185,5 +228,4 @@ for line in fd.readlines():
 		log_line = None
 	log_line.parse()
 	log_line.to_json()
-	log_line.dump_json( output_fd=out_fd )
-	#log_line.dump()
+	log_line.dump_json( output_fd=opts.output_fd )
