@@ -419,7 +419,7 @@
             "omit_interval" : "10",
             "duration" : "30",
             "interval" : "21600",
-            "force_bidirectional" : "0",
+            "force_bidirectional" : "1",
             "tool" : "bwctl/iperf3",
             "random_start_percentage" : "25",
             "type" : "perfsonarbuoy/bwctl"
@@ -493,7 +493,7 @@
             "omit_interval" : "10",
             "duration" : "30",
             "interval" : "21600",
-            "force_bidirectional" : "0",
+            "force_bidirectional" : "1",
             "tool" : "bwctl/iperf3",
             "random_start_percentage" : "25",
             "type" : "perfsonarbuoy/bwctl"
@@ -573,7 +573,7 @@
             "omit_interval" : "10",
             "duration" : "30",
             "interval" : "21600",
-            "force_bidirectional" : "0",
+            "force_bidirectional" : "1",
             "tool" : "bwctl/iperf3",
             "random_start_percentage" : "25",
             "type" : "perfsonarbuoy/bwctl"
@@ -650,7 +650,7 @@
             "omit_interval" : "10",
             "duration" : "30",
             "interval" : "21600",
-            "force_bidirectional" : "0",
+            "force_bidirectional" : "1",
             "tool" : "bwctl/iperf3",
             "random_start_percentage" : "25",
             "type" : "perfsonarbuoy/bwctl"
@@ -730,7 +730,7 @@
             "omit_interval" : "10",
             "duration" : "30",
             "interval" : "21600",
-            "force_bidirectional" : "0",
+            "force_bidirectional" : "1",
             "tool" : "bwctl/iperf3",
             "random_start_percentage" : "25",
             "type" : "perfsonarbuoy/bwctl"
@@ -807,7 +807,7 @@
             "omit_interval" : "10",
             "duration" : "30",
             "interval" : "21600",
-            "force_bidirectional" : "0",
+            "force_bidirectional" : "1",
             "tool" : "bwctl/iperf3",
             "random_start_percentage" : "25",
             "type" : "perfsonarbuoy/bwctl"
