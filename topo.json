@@ -1,0 +1,186 @@
+{
+  "name": "simple",
+  "description": "Simple topo",
+  "nodes": [
+    {
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "ANL",
+      "type": "node",
+      "x": 66,
+      "y": 34,
+      "id": "e2c3f4eb-60b4-4f9c-87f4-b5ea2d354a20"
+    },
+    {
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "LBL",
+      "site": 5,
+      "type": "node",
+      "x": 41,
+      "y": 56,
+      "id": "5296cc81-c122-451d-9774-cae2aea6f0f5"
+    },
+    {
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "NERSC",
+      "site": 5,
+      "type": "node",
+      "x": 105,
+      "y": 86,
+      "id": "04f2c06d-375a-4cfd-bbab-9c2cb9e5208e"
+    },
+    {
+      "id": "d9538d5a-848b-4bbf-94cb-659fae3fb9e6",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "BNL",
+      "type": "node",
+      "x": 136,
+      "y": 48
+    },
+    {
+      "id": "063b387e-1f81-4343-9700-887f891e1c9a",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "SLAC",
+      "type": "node",
+      "x": 147,
+      "y": 76
+    },
+    {
+      "id": "af9e20d9-3d01-4a5c-8aca-db3a13482145",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "CXI",
+      "type": "node",
+      "x": 148,
+      "y": 98
+    },
+    {
+      "id": "cb05f602-0d12-4249-a1dd-ceede09a703d",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "DTN",
+      "type": "node",
+      "x": 102,
+      "y": 98
+    },
+    {
+      "id": "98efcb28-26ae-4e85-a36d-de51cb84121c",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "bl832",
+      "type": "node",
+      "x": 40,
+      "y": 90
+    },
+    {
+      "id": "52ed057a-ac4f-4627-8dca-b0500711dddd",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "team4",
+      "type": "node",
+      "x": 24,
+      "y": 93
+    },
+    {
+      "id": "d1e0ae67-abd9-4e32-ad37-fe1c89d215b0",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "2-BM",
+      "type": "node",
+      "x": 106,
+      "y": 23
+    }
+  ],
+  "edges": [
+    {
+      "capacity": "100G",
+      "source": "Node1",
+      "target": "Node2"
+    },
+    {
+      "capacity": "40G",
+      "source": "Node2",
+      "target": "Node3"
+    },
+    {
+      "capacity": "10G",
+      "source": "Node3",
+      "target": "Node1"
+    },
+    {
+      "source": "LBL",
+      "target": "LBL",
+      "capacity": ""
+    },
+    {
+      "source": "LBL",
+      "target": "ANL",
+      "capacity": ""
+    },
+    {
+      "source": "team4",
+      "target": "LBL",
+      "capacity": ""
+    },
+    {
+      "source": "bl832",
+      "target": "LBL",
+      "capacity": ""
+    },
+    {
+      "source": "ANL",
+      "target": "2-BM",
+      "capacity": ""
+    },
+    {
+      "source": "ANL",
+      "target": "BNL",
+      "capacity": ""
+    },
+    {
+      "source": "LBL",
+      "target": "BNL",
+      "capacity": ""
+    },
+    {
+      "source": "NERSC",
+      "target": "LBL",
+      "capacity": ""
+    },
+    {
+      "source": "NERSC",
+      "target": "BNL",
+      "capacity": ""
+    },
+    {
+      "source": "NERSC",
+      "target": "DTN",
+      "capacity": ""
+    },
+    {
+      "source": "NERSC",
+      "target": "SLAC",
+      "capacity": ""
+    },
+    {
+      "source": "CXI",
+      "target": "SLAC",
+      "capacity": ""
+    }
+  ]
+}
+
