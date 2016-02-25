@@ -13,6 +13,7 @@ import json
 import socket
 
 class FtpLog:
+	#
 	def __init__( self, log_line ):
 		self.line = log_line
 		self.log_dict = dict()
