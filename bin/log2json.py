@@ -138,6 +138,7 @@ class GridftpLog( GenericLog ):
 	# Process a single Gridftp log file line
 	#
 	def __init__( self, log_line ):
+		# Call the superclass constructor
 		GenericLog.__init__(  self, log_line )
 		# keywords{} maps log file keywords to standard keywords used in the JSON file
 		self.keywords = {'START': 'START', 'DATE': 'STOP', 'NBYTES': 'BYTES', 'DEST': 'DEST', 'HOST': 'SOURCE', 'TYPE': 'TYPE', 'CODE': 'CODE'}
@@ -174,6 +175,7 @@ class ApacheAccessLog( GenericLog ):
 	# Process a single Apache access log file line
 	#
 	def __init__( self, log_line ):
+		# Call the superclass constructor
 		GenericLog.__init__( self, log_line )
 		self.my_IP = socket.gethostbyname(socket.gethostname())
 	
