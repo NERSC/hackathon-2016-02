@@ -1,0 +1,183 @@
+{
+  "name": "simple",
+  "description": "Simple topo",
+  "nodes": [
+    {
+      "id": "4b3ee26c-d5ca-434e-ad77-7b184b5682b0",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "LBNL",
+      "type": "hub",
+      "x": 25,
+      "y": 35
+    },
+    {
+      "id": "58ca0ac6-e3f0-4458-970b-ea9b8d7e71d0",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "NERSC",
+      "type": "hub",
+      "x": 25,
+      "y": 125
+    },
+    {
+      "id": "0467dec4-e327-45eb-a0b0-9028e36f6842",
+      "label_dx": null,
+      "label_dy": 0,
+      "label_position": "top",
+      "name": "BL832",
+      "type": "esnet_site",
+      "x": 1,
+      "y": 29
+    },
+    {
+      "id": "8df339e6-c09f-4ce5-a075-910d5055aea4",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "NCEM",
+      "type": "esnet_site",
+      "x": 17,
+      "y": 10
+    },
+    {
+      "id": "35e4eb44-75b1-4f7a-936c-fcd8396348b7",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "DTN",
+      "type": "esnet_site",
+      "x": 6,
+      "y": 140
+    },
+    {
+      "id": "d6af5d28-a99b-4f28-8080-659dfd6ccde0",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "SLAC",
+      "type": "hub",
+      "x": 25,
+      "y": 200
+    },
+    {
+      "id": "b418e6fc-b126-43bb-a52e-9a96779a643a",
+      "label_dx": null,
+      "label_dy": 0,
+      "label_position": "top",
+      "name": "CXI",
+      "type": "esnet_site",
+      "x": 15,
+      "y": 220
+    },
+    {
+      "id": "bcef810e-76dc-465c-aff4-41960c06c8e7",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "ANL",
+      "type": "hub",
+      "x": 200,
+      "y": 25
+    },
+    {
+      "id": "e715fe36-9cfb-43ff-9b2e-cd41ac80588e",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "2-BM",
+      "type": "esnet_site",
+      "x": 220,
+      "y": 15
+    },
+    {
+      "id": "af6949cc-2249-4dd0-8315-538d4ef675e0",
+      "label_dx": null,
+      "label_dy": null,
+      "label_position": "top",
+      "name": "BNL",
+      "type": "hub",
+      "x": 350,
+      "y": 100
+    }
+  ],
+  "edges": [
+    {
+      "source": "BL832",
+      "target": "LBNL",
+      "capacity": "10G"
+    },
+    {
+      "source": "NCEM",
+      "target": "LBNL",
+      "capacity": "10G"
+    },
+    {
+      "source": "LBNL",
+      "target": "NERSC",
+      "capacity": "100G"
+    },
+    {
+      "source": "LBNL",
+      "target": "ANL",
+      "capacity": "100G"
+    },
+    {
+      "source": "NERSC",
+      "target": "ANL",
+      "capacity": ""
+    },
+    {
+      "source": "BNL",
+      "target": "ANL",
+      "capacity": "100G"
+    },
+    {
+      "source": "NERSC",
+      "target": "BNL",
+      "capacity": "100G"
+    },
+    {
+      "source": "LBNL",
+      "target": "BNL",
+      "capacity": "100G"
+    },
+    {
+      "source": "SLAC",
+      "target": "LBNL",
+      "capacity": "100G"
+    },
+    {
+      "source": "SLAC",
+      "target": "NERSC",
+      "capacity": "100G"
+    },
+    {
+      "source": "SLAC",
+      "target": "ANL",
+      "capacity": "100G"
+    },
+    {
+      "source": "SLAC",
+      "target": "BNL",
+      "capacity": "100G"
+    },
+    {
+      "source": "CXI",
+      "target": "SLAC",
+      "capacity": "10G"
+    },
+    {
+      "source": "DTN",
+      "target": "NERSC",
+      "capacity": "10G"
+    },
+    {
+      "source": "2-BM",
+      "target": "ANL",
+      "capacity": "10G"
+    }
+  ]
+}
