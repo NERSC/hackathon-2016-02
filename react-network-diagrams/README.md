@@ -1,3 +1,15 @@
+# Quick & Dirty for hackathon-2016-02
+
+git clone
+
+cd react-network-diagrams
+
+npm install
+
+npm run start-website
+
+Then navigate to http://localhost:8080
+
 # React Network Diagrams [![Build Status](https://travis-ci.org/esnet/react-network-diagrams.svg?branch=master)](https://travis-ci.org/esnet/react-network-diagrams)
 
 
