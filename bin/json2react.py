@@ -13,6 +13,65 @@ import socket
 import string
 import getopt
 
+class ParseOptions:
+	#
+	# Class to handle command-line argument processing.
+	#
+	def __init__( self ):
+		self.my_options = dict()
+		self.input_fd = sys.stdin
+		self.output_fd = sys.stdout
+		try:
+			opts, args = getopt.getopt( sys.argv[1:], "i:o:", ['input=', 'output='] )
+		except getopt.GetoptError as err:
+			print str(err)
+			self.usage()
+			sys.exit( 2 )
+		self.my_options['input'] = None
+		self.my_options['output'] = None
+		for opt, arg in opts:
+			if( opt in ('-i', '--input') ):
+				self.my_options['input'] = arg
+			elif ( opt in ('-o', '--output') ):
+				self.my_options['output'] = arg
+				try:
+					self.output_fd = open( arg, 'w' )
+				except:
+					print "*** Failed to open output file '" + arg + "' ***"
+					sys.exit( 2 )
+			else:
+				assert False, 'Unknown option'
+
+	def options_list( self ):
+		#
+		# Return all options as a Python list
+		#
+		return (self.my_options['input'], self.my_options['output'] )
+
+	def options_dict( self ):
+		#
+		# Return all options as a Python dictionary
+		#
+		return self.my_options
+
+	def option( self, option ):
+		#
+		# Return the named option as a string, or "None" if the option
+		# doesn't exist.
+		#
+		if ( self.my_options.has_key( option ) ):
+			return self.my_options[option]
+		else:
+			return None
+
+	def usage( self ):
+		print 'USAGE:'
+		print sys.argv[0] + ' -i <in_file> [--input=in_file] -o <out_file> [--output=<out_file>]'
+		print '               Where:'
+		print '                      <in_file> is the path/name of the log file to process (default stdin)'
+		print '                      <out_file> is the path/name of the file in which to write the JSON code (default stdout)'
+		print
+
 class JsonFiles:
 	def __init__( self ):
 		self.json_data = list()
@@ -56,8 +115,10 @@ class JsonFiles:
 		#
 		# Convert the parsed log file entry to JSON
 		#
-		self.records = { 'RECORDS': self.aggregate_data }
-		self.json = json.dumps( self.records )
+		xfers = self.aggregate_data.values()
+		#self.records = { 'RECORDS': self.aggregate_data }
+		self.records = { 'RECORDS': xfers }
+		self.json = json.dumps( self.records, indent=2 )
 
 	def dump_json( self, output_fd=None ):
 		#
@@ -95,8 +156,12 @@ class JsonFiles:
 #
 # MAIN PROGRAM
 #
+try:
+	opts = ParseOptions()
+except:
+	sys.exit( 2 )
+
 j = JsonFiles()
-#j.ingest( ('gftp.json',) )
-j.ingest( ('kip_gridftp.json',) )
+j.ingest( opts.option( 'input').split( ',') )
 j.aggregate()
-j.dump_json()
+j.dump_json( output_fd=opts.output_fd )
