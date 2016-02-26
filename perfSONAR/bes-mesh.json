@@ -145,18 +145,18 @@
                   {
                      "measurement_archives" : [
                         {
-                           "read_url" : "http://psnr-farm10.slac.stanford.edu /esmond/perfsonar/archive",
-                           "write_url" : "http://psnr-farm10.slac.stanford.edu /esmond/perfsonar/archive",
+                           "read_url" : "http://psnr-farm10.slac.stanford.edu/esmond/perfsonar/archive",
+                           "write_url" : "http://psnr-farm10.slac.stanford.edu/esmond/perfsonar/archive",
                            "type" : "perfsonarbuoy/owamp"
                         },
                         {
-                           "read_url" : "http://psnr-farm10.slac.stanford.edu /esmond/perfsonar/archive",
-                           "write_url" : "http://psnr-farm10.slac.stanford.edu /esmond/perfsonar/archive",
+                           "read_url" : "http://psnr-farm10.slac.stanford.edu/esmond/perfsonar/archive",
+                           "write_url" : "http://psnr-farm10.slac.stanford.edu/esmond/perfsonar/archive",
                            "type" : "perfsonarbuoy/bwctl"
                         },
                         {
-                           "read_url" : "http://psnr-farm10.slac.stanford.edu /esmond/perfsonar/archive",
-                           "write_url" : "http://psnr-farm10.slac.stanford.edu /esmond/perfsonar/archive",
+                           "read_url" : "http://psnr-farm10.slac.stanford.edu/esmond/perfsonar/archive",
+                           "write_url" : "http://psnr-farm10.slac.stanford.edu/esmond/perfsonar/archive",
                            "type" : "traceroute"
                         }
                      ],
