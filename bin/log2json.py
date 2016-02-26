@@ -47,7 +47,7 @@ class ParseOptions:
 			elif ( opt in ('-o', '--output') ):
 				self.my_options['output'] = arg
 				try:
-					self.my_options.output_fd = open( arg, 'w' )
+					self.output_fd = open( arg, 'w' )
 				except:
 					print "*** Failed to open output file '" + arg + "' ***"
 					sys.exit( 2 )
@@ -268,5 +268,4 @@ for line in opts.input_fd.readlines():
 		log_line = None
 	log_line.parse()
 	json_files.add_log_line( log_line.get_dict() )
-#json_files.dump()
-json_files.dump_json()
+json_files.dump_json( output_fd=opts.option( 'output_fd' ))
