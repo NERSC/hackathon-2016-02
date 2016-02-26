@@ -1,5 +1,4 @@
 #!/bin/env python
-
 #
 # A simple Python program that ingests an Apache access log, picks out interesting data, and outputs each line
 # in JSON format.
@@ -86,15 +85,49 @@ class ParseOptions:
 		print '                      <out_file> is the path/name of the file in which to write the JSON code (default stdout)'
 		print
 
-class GenericLog:
+class JsonFilesLog:
+	def __init__( self ):
+		self.json_container = { 'files': list() }
+		self.json = None
+
+	def add_log_line( self, line_dict ):
+		self.json_container['files'].append( line_dict )
+
+	def to_json( self ):
+		#
+		# Convert the parsed log file entry to JSON
+		#
+		self.json = json.dumps( self.json_container, indent=2 )
+
+	def dump_json( self, output_fd=None ):
+		#
+		# Write the JSON code to STDOUT, or an open file descriptor, if one is provided
+		#
+		if ( not self.json ):
+			self.to_json()
+
+		if ( self.json and len( self.json ) > 2 ):
+			if ( output_fd ):
+				output_fd.write( self.json + '\n' )
+			else:
+				print self.json
+
+	def dump( self ):
+		print "json_container:"
+		print self.json_container
+
+class GenericLogLine:
 	#
-	# Class GenericLog implements the basic class/method structure for parsing different
+	# Class GenericLogLine implements the basic class/method structure for parsing different
 	# log file formats. It is not intended to be instantiated directly.
 	#
 	def __init__( self, log_line ):
 		self.line = log_line
 		self.log_dict = dict()
-		socket.gethostbyname( socket.gethostname())
+		try:
+			socket.gethostbyname( socket.gethostname())
+		except:
+			print "Can't get my own IP address! " + socket.gethostname()
 
 	def parse( self ):
 		# This is a placeholder for the actual log file parsing code
@@ -105,6 +138,9 @@ class GenericLog:
 		# Convert the parsed log file entry to JSON
 		#
 		self.json = json.dumps( self.log_dict )
+
+	def get_dict( self ):
+		return self.log_dict
 
 	def dump_json( self, output_fd=None ):
 		#
@@ -133,13 +169,13 @@ class GenericLog:
 		print "values:", self.log_dict
 		print "json:", self.json
 
-class GridftpLog( GenericLog ):
+class GridftpLog( GenericLogLine ):
 	#
 	# Process a single Gridftp log file line
 	#
 	def __init__( self, log_line ):
 		# Call the superclass constructor
-		GenericLog.__init__(  self, log_line )
+		GenericLogLine.__init__(  self, log_line )
 		# keywords{} maps log file keywords to standard keywords used in the JSON file
 		self.keywords = {'START': 'START', 'DATE': 'STOP', 'NBYTES': 'BYTES', 'DEST': 'DEST', 'HOST': 'SOURCE', 'TYPE': 'TYPE', 'CODE': 'CODE'}
 		self.log_dict = dict()
@@ -170,13 +206,13 @@ class GridftpLog( GenericLog ):
 		if ( self.log_dict.has_key( 'DEST' ) ):
 			self.log_dict['DEST'] = name2IP( self.log_dict['DEST'] )
 
-class ApacheAccessLog( GenericLog ):
+class ApacheAccessLogLine( GenericLogLine ):
 	#
 	# Process a single Apache access log file line
 	#
 	def __init__( self, log_line ):
 		# Call the superclass constructor
-		GenericLog.__init__( self, log_line )
+		GenericLogLine.__init__( self, log_line )
 		self.my_IP = socket.gethostbyname(socket.gethostname())
 	
 	def parse( self ):
@@ -221,13 +257,16 @@ except:
 
 file_type = opts.option( 'type' )
 
+json_files = JsonFilesLog()
+
 for line in opts.input_fd.readlines():
 	if ( file_type == 'apache' ):
-		log_line = ApacheAccessLog( line )
+		log_line = ApacheAccessLogLine( line )
 	elif ( file_type == 'gridftp' ):
 		log_line = GridftpLog( line )
 	elif ( file_type == 'gridftp-anon' ):
 		log_line = None
 	log_line.parse()
-	log_line.to_json()
-	log_line.dump_json( output_fd=opts.output_fd )
+	json_files.add_log_line( log_line.get_dict() )
+#json_files.dump()
+json_files.dump_json()
