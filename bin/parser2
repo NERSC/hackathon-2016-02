@@ -1,0 +1,93 @@
+#!/usr/bin/env python
+
+import ast
+
+import pandas as pd
+from dateutil import parser as dparser
+
+facilities = ['APS', 'APS', 'LCLS', 'NERSC']
+
+struc = {
+
+}
+# dst_ip = { 'name': 'ip' }
+fac_names = []
+fac_ips = []
+
+class foo:
+    def __init__(self):
+        self.facility=None
+        self.dst_ip=None
+        self.experiment=None
+        self.file_type=None
+        self.intrument=None
+        self.protocol=None
+        self.session_id=None
+        self.size=None
+        self.src_ip=None
+        self.start_time=None
+        self.stop_time=None
+
+    def createJSON(self):
+        dash = {
+          "dst_ip": "128.55.205.18",
+          "experiment": "cxi01516",
+          "file_type": "xtc",
+          "intrument": "CXI",
+          "protocol": "irods",
+          "session_id": 0,
+          "size": 88496100,
+          "src_ip": "134.79.103.100",
+          "start_time": 1455475938,
+          "stop_time": 1455475944
+        }
+
+def file_len(fname):
+    with open(fname) as f:
+        for i, l in enumerate(f):
+            pass
+        f.close()
+    return i + 1
+
+def parser(fname,fopen,kv):
+    d = []
+    tmp = {}
+    for line in xrange(file_len(fname)):
+        try:
+            tmp = ast.literal_eval(fopen.readline()[:kv])
+            tmp['START'] = dparser.parse(tmp['START'].split('.')[0])
+            tmp['STOP'] = dparser.parse(tmp['STOP'].split('.')[0])
+            d.append(tmp)
+        except:
+            return None
+    return d
+
+# nersc_file = 'bin/logs/DTN_NERSC.json'
+# aps_file = 'bin/logs/apsgftp.json'
+# lcls_file = 'bin/logs/2016-02-22.json'
+# als_file = 'bin/logs/data832.json'
+
+nersc_file = '/Users/DOE6903584/NERSC/hackathon-2016-02/bin/logs/DTN_NERSC.json'
+aps_file = '/Users/DOE6903584/NERSC/hackathon-2016-02/bin/logs/apsgftp.json'
+lcls_file = '/Users/DOE6903584/NERSC/hackathon-2016-02/bin/logs/2016-02-22.json'
+als_file = '/Users/DOE6903584/NERSC/hackathon-2016-02/bin/logs/data832.json'
+
+nersc_data = open(nersc_file, 'r')
+aps_data = open(aps_file, 'r')
+lcls_data = open(lcls_file, 'r')
+als_data = open(als_file, 'r')
+
+d_aps = parser(aps_file,aps_data,-1)
+d_nersc = parser(nersc_file,nersc_data,-2)
+d_als = parser(als_file,als_data,-1)
+
+DF_als=pd.DataFrame(d_als, columns=['START', 'STOP', 'BYTES', 'SOURCE', 'DEST'])
+DF_nersc=pd.DataFrame(d_nersc)
+DF_aps=pd.DataFrame(d_aps)
+
+frames = [DF_als, DF_nersc, DF_aps]
+cresult = pd.concat(frames, keys=['als','nersc','aps'])
+
+# aggr ='bin/logs/dash.json'
+# cresult.to_json(aggr, orient='split')
+

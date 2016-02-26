@@ -1,0 +1,120 @@
+#!/usr/bin/env python
+
+import ast
+
+import pandas as pd
+from dateutil import parser as dparser
+
+facilities = ['APS', 'APS', 'LCLS', 'NERSC']
+
+struc = {
+
+}
+# dst_ip = { 'name': 'ip' }
+fac_names = []
+fac_ips = []
+
+class foo:
+    def __init__(self):
+        self.facility=None
+        self.dst_ip=None
+        self.experiment=None
+        self.file_type=None
+        self.intrument=None
+        self.protocol=None
+        self.session_id=None
+        self.size=None
+        self.src_ip=None
+        self.start_time=None
+        self.stop_time=None
+
+    def createJSON(self):
+        dash = {
+          "dst_ip": "128.55.205.18",
+          "experiment": "cxi01516",
+          "file_type": "xtc",
+          "intrument": "CXI",
+          "protocol": "irods",
+          "session_id": 0,
+          "size": 88496100,
+          "src_ip": "134.79.103.100",
+          "start_time": 1455475938,
+          "stop_time": 1455475944
+        }
+
+nersc_file = '/Users/DOE6903584/NERSC/hackathon-2016-02/bin/logs/DTN_NERSC.json'
+aps_file = '/Users/DOE6903584/NERSC/hackathon-2016-02/bin/logs/apsgftp.json'
+lcls_file = '/Users/DOE6903584/NERSC/hackathon-2016-02/bin/logs/2016-02-22.json'
+als_file = '/Users/DOE6903584/NERSC/hackathon-2016-02/bin/logs/data832.json'
+
+
+def file_len(fname):
+    with open(fname) as f:
+        for i, l in enumerate(f):
+            pass
+        f.close()
+    return i + 1
+
+nersc_data = open(nersc_file, 'r')
+aps_data = open(aps_file, 'r')
+lcls_data = open(lcls_file, 'r')
+als_data = open(als_file, 'r')
+
+d_als = []
+tmp = {}
+for line in xrange(file_len(als_file)):
+    try:
+        tmp = ast.literal_eval(als_data.readline()[:-1])
+        tmp['START'] = dparser.parse(tmp['START'].split('.')[0])
+        tmp['STOP'] = dparser.parse(tmp['STOP'].split('.')[0])
+        d_als.append(tmp)
+    except:
+        pass
+
+d_aps = []
+tmp = {}
+for line in xrange(file_len(aps_file)):
+    try:
+        tmp = ast.literal_eval(aps_data.readline()[:-1])
+        tmp['START'] = dparser.parse(tmp['START'].split('.')[0])
+        tmp['STOP'] = dparser.parse(tmp['STOP'].split('.')[0])
+        d_aps.append(tmp)
+    except:
+        pass
+
+d_nersc = []
+tmp = {}
+for line in xrange(file_len(nersc_file)):
+    try:
+        tmp = ast.literal_eval(nersc_data.readline()[:-2])
+        tmp['START'] = dparser.parse(tmp['START'].split('.')[0])
+        tmp['STOP'] = dparser.parse(tmp['STOP'].split('.')[0])
+        d_nersc.append(tmp)
+    except:
+        pass
+
+
+DF_als=pd.DataFrame(d_als, columns=['START', 'STOP', 'BYTES', 'SOURCE', 'DEST'])
+DF_nersc=pd.DataFrame(d_nersc)
+DF_aps=pd.DataFrame(d_aps)
+
+frames = [DF_als, DF_nersc, DF_aps]
+cresult = pd.concat(frames, keys=['als','nersc','aps'])
+
+# DF_als.to_json()
+
+# In [48]: pd.unique(cresult.SOURCE.ravel())
+# Out[48]:
+# array(['131.243.36.20', '128.55.205.18', '128.55.205.19', '128.55.205.21',
+#        '164.54.100.54', '164.54.143.10'], dtype=object)
+#
+# In [49]: pd.unique(cresult.DEST.ravel())
+# Out[49]:
+# array(['169.229.198.71', '165.91.13.31', '0.0.0.0', '169.229.198.45',
+#        '169.229.198.117', '146.139.10.2', '164.54.143.10', '138.67.40.219',
+#        '140.221.96.58', '140.221.96.52', '140.221.96.55', '140.221.96.53'], dtype=object)
+
+# for h in cresult.it
+
+logfile='/Users/DOE6903584/NERSC/hackathon-2016-02/bin/logs/dash.json'
+cresult.to_json(logfile, orient='split')
